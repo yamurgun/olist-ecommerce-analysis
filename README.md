@@ -9,7 +9,7 @@ The analysis includes data cleaning, relational data modeling, exploratory data 
 
 ## Notebook
 Open the full analysis here:
-[Olist_analysis.ipynb](./Olist_analysis.ipynb)
+[Olist_analysis (1).ipynb](./Olist_analysis%20(1).ipynb)
 
 ---
 

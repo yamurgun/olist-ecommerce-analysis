@@ -88,7 +88,14 @@ The following statistical tests were applied:
 
 ## Example Visualization
 
-![Delivery vs Review](delivery_vs_review.png)
+### Review Score by Delay Status
+![Review Score by Delay Status](delivery_vs_review.png)
+
+### Top 10 Categories by Order Count
+![Top 10 Categories by Order Count](category_distribution.png)
+
+### Payment Method Distribution
+![Payment Method Distribution](payment_distribution.png)
 
 ---
 

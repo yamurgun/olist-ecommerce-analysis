@@ -1,33 +1,113 @@
 # Olist E-Commerce Data Analysis
 
 ## Project Overview
-This project analyzes the Brazilian e-commerce dataset (Olist) to understand customer behavior, delivery performance, and satisfaction drivers.
+This project analyzes the Brazilian e-commerce dataset (Olist) to understand customer behavior, delivery performance, and key drivers of customer satisfaction.
 
-## Dataset
-Multi-table relational dataset including:
+The analysis includes data cleaning, relational data modeling, exploratory data analysis, and statistical testing to generate actionable business insights.
+
+---
+
+## Notebook
+Open the full analysis here:
+[Olist_analysis.ipynb](./Olist_analysis.ipynb)
+
+---
+
+## Dataset Description
+The dataset consists of multiple relational tables:
+
 - orders
 - customers
-- items
+- order items
 - payments
 - reviews
 - products
+- sellers
 
-## Approach
-- Data cleaning and preprocessing
-- Aggregation to order-level dataset
-- Exploratory Data Analysis (EDA)
-- Hypothesis testing (A/B testing)
+---
+
+## Methodology
+
+### Data Cleaning
+- handled missing values carefully
+- standardized categorical variables
+- converted timestamp fields to datetime format
+
+### Data Modeling
+Due to one-to-many relationships (items, payments), direct joins would create duplicate rows.
+
+To address this:
+- item-level and payment-level tables were aggregated
+- an order-level dataset was constructed
+
+This ensured consistency and reliability in the analysis.
+
+---
+
+### Feature Engineering
+The following features were created:
+
+- order_value
+- delivery_time_days
+- delivery_delay_days
+- is_delayed
+- is_satisfied
+
+---
+
+### Exploratory Data Analysis
+The analysis focused on:
+
+- order value distribution
+- delivery performance
+- customer satisfaction
+- product categories
+- payment behavior
+
+---
+
+### Hypothesis Testing
+
+The following statistical tests were applied:
+
+- Independent T-Test (delivery speed vs satisfaction)
+- Chi-Square Test (delay vs satisfaction)
+- ANOVA (category vs order value)
+- Chi-Square Test (payment type vs satisfaction)
+
+---
 
 ## Key Insights
-- Delayed deliveries significantly reduce customer satisfaction
-- Delivery performance is a key business driver
-- Product category impacts order value
-- Payment method has limited effect on satisfaction
 
-## Tools
+- Delayed deliveries are associated with lower customer satisfaction
+- Delivery performance is a critical factor in user experience
+- Product category significantly impacts order value
+- Payment method has limited impact on satisfaction
+
+---
+
+## Example Visualization
+
+![Delivery vs Review](delivery_vs_review.png)
+
+---
+
+## Tools Used
+
 - Python (Pandas, NumPy)
 - Plotly
 - SciPy
 
-## Project File
-- `Olist_analysis.ipynb`
+---
+
+## Next Steps
+
+- customer segmentation
+- predictive modeling
+- retention analysis
+
+---
+
+## Author
+
+This project was developed as part of a data analysis portfolio to demonstrate practical skills in data cleaning, analysis, and statistical reasoning.
